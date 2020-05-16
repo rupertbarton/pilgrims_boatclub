@@ -31,7 +31,7 @@ jobs:
           command: npm test
       - run:
           name: Build app
-          command: npm build
+          command: npm run build
       - run:
           command: ls -at
       - persist_to_workspace:
