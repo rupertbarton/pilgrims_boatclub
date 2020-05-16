@@ -32,6 +32,8 @@ jobs:
       - run:
           name: Build app
           command: npm build
+      - run:
+          command: ls -at
       - persist_to_workspace:
           root: ~/pilgrimBC
           paths: | 
