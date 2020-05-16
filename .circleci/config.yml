@@ -36,8 +36,10 @@ jobs:
           command: ls -at
       - persist_to_workspace:
           root: ~/pilgrimBC
-          paths: | 
+          paths:
             - build/*
+            - .firebaserc
+            - firebase.json
 
   build_and_deploy:
     working_directory: ~/pilgrimBC
