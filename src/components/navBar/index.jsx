@@ -41,9 +41,7 @@ const NavBar = () => {
           <img className={classes.logo} src={logo} alt="Logo" />
           {routes.map((route) => (
             <Button color="inherit" key={route.name} onClick={() => routeOnClick(route.path)}>
-              {' '}
               {route.name}
-              {' '}
             </Button>
           ))}
         </Toolbar>
