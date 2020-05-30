@@ -4,6 +4,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import logo from "../../assets/pilgrimsLogo.png";
+import routes from "../../routes";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,21 +28,20 @@ const useStyles = makeStyles((theme) => ({
 
 const NavBar = () => {
   const classes = useStyles();
+  let history = useHistory();
+
+  const routeOnClick = (path) => {
+    history.push(path)
+  }
 
   return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="fixed">
         <Toolbar disableGutters={true}>
           <img className={classes.logo} src={logo} alt="Logo" />
-          <Button color="inherit">Home</Button>
-          <Button color="inherit">KSCBC</Button>
-          <Button color="inherit">News</Button>
-          <Button color="inherit">Pilgrims Offcuts</Button>
-          <Button color="inherit">Gallery</Button>
-          <Button color="inherit">King's School &amp; OKS</Button>
-          <Button color="inherit">AGM &amp; Trustee Meetings</Button>
-          <Button color="inherit">Club Page</Button>
-          <Button color="inherit">Contact Us</Button>
+          {routes.map((route) => (
+              <Button color="inherit" key={route.name} onClick={() => routeOnClick(route.path)}> {route.name} </Button>
+          ))}
         </Toolbar>
       </AppBar>
     </div>
