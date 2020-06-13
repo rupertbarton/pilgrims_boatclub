@@ -6,28 +6,10 @@ import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 import logo from '../../assets/pilgrimsLogo.png';
 import routes from '../../routes';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  appBar: {
-    height: '64px',
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-  logo: {
-    height: '100%',
-    width: 'auto',
-  },
-}));
+import styles from './styles';
 
 const NavBar = () => {
-  const classes = useStyles();
+  const classes = makeStyles(styles)();
   const history = useHistory();
 
   const routeOnClick = (path) => {
