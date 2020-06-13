@@ -1,12 +1,13 @@
 import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
+import Home from './components/content/home';
 
 export default [
   {
     name: 'Home',
     path: '/',
     icon: <HomeIcon />,
-    component: <div>HiHome!!!!!</div>,
+    component: <Home />,
   },
   {
     name: 'KSCBC',
