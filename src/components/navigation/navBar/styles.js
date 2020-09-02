@@ -12,7 +12,10 @@ export default (theme) => ({
     flexGrow: 1,
   },
   logo: {
-    height: '100%',
+    height: theme.spacing(8),
     width: 'auto',
+  },
+  logoButton: {
+    padding: 0,
   },
 });
