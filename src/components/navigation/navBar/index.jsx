@@ -8,15 +8,16 @@ import { useHistory } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import logo from '../../../assets/pilgrimsLogo.png';
+import logo from '../../../assets/img/pilgrimsLogo.png';
 import routes from '../../../routes';
 import styles from './styles';
 import Drawer from '../drawer';
+import mobileWidth from '../../../constants/mobileWidth';
 
 const NavBar = () => {
   const classes = makeStyles(styles)();
   const history = useHistory();
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery(`(max-width:${mobileWidth}px)`);
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
