@@ -42,7 +42,7 @@ const NavBar = () => {
               variant="h6"
               className={classes.title}
             >
-              Canterbury Pilgrim's Boat Club
+              Canterbury Pilgrim&apos;s Boat Club
             </Typography>
             <Drawer mobileOpen={mobileOpen} toggleDrawer={handleDrawerToggle} />
           </Toolbar>
