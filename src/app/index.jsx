@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../components/navigation/navBar';
 import PaperDisplay from '../components/content/paperDisplay';
 import routes from '../routes';
@@ -13,6 +13,7 @@ const App = () => (
           <PaperDisplay>{route.component}</PaperDisplay>
         </Route>
       ))}
+      <Redirect from="*" to="/" />
     </Switch>
   </Router>
 );
