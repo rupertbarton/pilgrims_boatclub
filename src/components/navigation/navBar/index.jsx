@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
 import logo from '../../../assets/pilgrimsLogo.png';
 import routes from '../../../routes';
 import styles from './styles';
@@ -17,10 +18,6 @@ const NavBar = () => {
   const history = useHistory();
   const isMobile = useMediaQuery('(max-width:600px)');
 
-  const routeOnClick = (path) => {
-    history.push(path);
-  };
-
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -29,7 +26,7 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appBar} position="fixed">
+      <AppBar position="fixed">
         {isMobile ? (
           <Toolbar>
             <IconButton
@@ -41,13 +38,19 @@ const NavBar = () => {
             >
               <MenuIcon />
             </IconButton>
+            <Typography
+              variant="h6"
+              className={classes.title}
+            >
+              Canterbury Pilgrim's Boat Club
+            </Typography>
             <Drawer mobileOpen={mobileOpen} toggleDrawer={handleDrawerToggle} />
           </Toolbar>
         ) : (
           <Toolbar disableGutters>
             <Button
               className={classes.logoButton}
-              onClick={() => routeOnClick('/')}
+              onClick={() => history.push('/')}
             >
               <img className={classes.logo} src={logo} alt="Logo" />
             </Button>
@@ -55,7 +58,7 @@ const NavBar = () => {
               <Button
                 color="inherit"
                 key={route.name}
-                onClick={() => routeOnClick(route.path)}
+                onClick={() => history.push(route.path)}
               >
                 {route.name}
               </Button>

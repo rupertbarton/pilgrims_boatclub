@@ -2,9 +2,6 @@ export default (theme) => ({
   root: {
     flexGrow: 1,
   },
-  appBar: {
-    height: theme.spacing(8),
-  },
   menuButton: {
     marginRight: theme.spacing(2),
   },

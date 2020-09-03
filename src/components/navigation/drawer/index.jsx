@@ -7,8 +7,11 @@ import PropTypes from 'prop-types';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
 import logo from '../../../assets/pilgrimsLogo.png';
 import styles from './styles';
+import routes from '../../../routes';
 
 const DrawerComponent = ({ mobileOpen, toggleDrawer }) => {
   const classes = makeStyles(styles)();
@@ -27,9 +30,15 @@ const DrawerComponent = ({ mobileOpen, toggleDrawer }) => {
       </div>
       <Divider />
       <List>
-        <li>sgsfg</li>
-        <li>sgsfg</li>
-        <li>sgsfg</li>
+        {routes.map((route) => (
+          <ListItem
+            button
+            key={route.name}
+            onClick={() => { history.push(route.path); toggleDrawer(); }}
+          >
+            <ListItemText primary={route.name} />
+          </ListItem>
+        ))}
       </List>
     </div>
   );
