@@ -4,7 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -17,6 +17,7 @@ import mobileWidth from '../../../constants/mobileWidth';
 const NavBar = () => {
   const classes = makeStyles(styles)();
   const history = useHistory();
+  const location = useLocation();
   const isMobile = useMediaQuery(`(max-width:${mobileWidth}px)`);
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -29,6 +30,7 @@ const NavBar = () => {
     <div className={classes.root}>
       <AppBar position="fixed">
         {isMobile ? (
+
           <Toolbar>
             <IconButton
               edge="start"
@@ -47,7 +49,9 @@ const NavBar = () => {
             </Typography>
             <Drawer mobileOpen={mobileOpen} toggleDrawer={handleDrawerToggle} />
           </Toolbar>
+
         ) : (
+
           <Toolbar disableGutters>
             <Button
               className={classes.logoButton}
@@ -58,11 +62,13 @@ const NavBar = () => {
             {routes.map((route) => (
               <Button
                 color="inherit"
+                variant={location.pathname === route.path ? 'outlined' : 'text'}
                 key={route.name}
                 onClick={() => history.push(route.path)}
               >
                 {route.name}
               </Button>
+
             ))}
           </Toolbar>
         )}

@@ -10,6 +10,9 @@ import membershipForm from '../../../assets/pdf/membershipForm.pdf';
 import standingOrderFormSingle from '../../../assets/pdf/standingOrderFormSingle.pdf';
 import styles from './styles';
 import standingOrderFormDouble from '../../../assets/pdf/standingOrderFormDouble.pdf';
+import kscbcLogo from '../../../assets/img/kscbcLogo.png';
+import oksLogo from '../../../assets/img/oksLogo.jfif';
+import kscLogo from '../../../assets/img/kscLogo.jfif';
 
 
 const Home = () => {
@@ -36,9 +39,9 @@ const Home = () => {
         <Typography variant="body1">The next Canterbury Pilgrims BC AGM will be held on Saturday 21st September, 2019 16:00:</Typography>
         <Typography variant="body1">Please find the below links in regards to the agenda:</Typography>
         <Typography variant="body1">
-          <a href={trusteesAgenda} rel="noreferrer" target="_blank">Trustee Agenda</a>
+          <a href={trusteesAgenda} rel="noopener noreferrer" target="_blank">Trustee Agenda</a>
           {' & '}
-          <a href={agmAgenda} rel="noreferrer" target="_blank">AGM Agenda</a>
+          <a href={agmAgenda} rel="noopener noreferrer" target="_blank">AGM Agenda</a>
         </Typography>
         <Typography variant="body1">
           For Past Meeting Minutes please
@@ -63,15 +66,15 @@ const Home = () => {
         </Typography>
         <Typography variant="body1">To become a member:.</Typography>
         <Typography variant="body1">
-          <a href={membershipForm} rel="noreferrer" target="_blank">Membership Form</a>
+          <a href={membershipForm} rel="noopener noreferrer" target="_blank">Membership Form</a>
           {' '}
           &amp;
           {' '}
-          <a href={standingOrderFormSingle} rel="noreferrer" target="_blank">Standing Order Form (continual)</a>
+          <a href={standingOrderFormSingle} rel="noopener noreferrer" target="_blank">Standing Order Form (continual)</a>
           {' '}
           /
           {' '}
-          <a href={standingOrderFormDouble} rel="noreferrer" target="_blank">Standing Order Form (specified length)</a>
+          <a href={standingOrderFormDouble} rel="noopener noreferrer" target="_blank">Standing Order Form (specified length)</a>
         </Typography>
       </div>
 
@@ -88,6 +91,26 @@ const Home = () => {
         <Typography variant="body1">King&apos;s School Canterbury Boat Club needs help and support from Parents of active rowing pupils. From helping to run the Pilgrims to simply turning up on the towpath at a Head or Regatta to cheer on the rowers your participation is greatly valued. If you haven&apos;t joined already please do and also consider offering your help to the club.</Typography>
         <div className={classes.centerText}>
           <Button variant="contained" color="primary" onClick={() => history.push('/contact-us')}>Join up here</Button>
+        </div>
+      </div>
+
+      <Divider />
+
+      <div className={classes.externalLinksContainer}>
+        <div className={classes.externalLink}>
+          <a href="http://www.kingsrowing.co.uk/" rel="noopener noreferrer" target="_blank">
+            <img className={classes.logo} src={kscbcLogo} alt="KSCBC Logo" />
+          </a>
+        </div>
+        <div className={classes.externalLink}>
+          <a href="http://www.oks.org.uk/" rel="noopener noreferrer" target="_blank">
+            <img className={classes.logo} src={oksLogo} alt="OKS Logo" />
+          </a>
+        </div>
+        <div className={classes.externalLink}>
+          <a href="http://www.kingsrowing.co.uk/results.php" rel="noopener noreferrer" target="_blank">
+            <img className={classes.logo} src={kscLogo} alt="KSC Logo" />
+          </a>
         </div>
       </div>
     </>

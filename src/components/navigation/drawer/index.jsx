@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import logo from '../../../assets/img/pilgrimsLogo.png';
@@ -16,6 +16,7 @@ import routes from '../../../routes';
 const DrawerComponent = ({ mobileOpen, toggleDrawer }) => {
   const classes = makeStyles(styles)();
   const history = useHistory();
+  const location = useLocation();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const drawerContent = () => (
@@ -35,6 +36,7 @@ const DrawerComponent = ({ mobileOpen, toggleDrawer }) => {
             button
             key={route.name}
             onClick={() => { history.push(route.path); toggleDrawer(); }}
+            selected={location.pathname === route.path}
           >
             <ListItemText primary={route.name} />
           </ListItem>
