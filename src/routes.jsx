@@ -51,4 +51,10 @@ export default [
     icon: <HomeIcon />,
     component: <div>HiClub !!!!!</div>,
   },
+  {
+    name: 'Contact Us',
+    path: '/contact-us',
+    icon: <HomeIcon />,
+    component: <div>Contact US</div>,
+  },
 ];
