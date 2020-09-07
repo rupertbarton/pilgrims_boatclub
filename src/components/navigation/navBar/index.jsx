@@ -1,19 +1,21 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import ListItem from '@material-ui/core/ListItem';
-import { useHistory, useLocation } from 'react-router-dom';
-import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
+import ListItem from '@material-ui/core/ListItem';
+import { makeStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import MenuIcon from '@material-ui/icons/Menu';
+import { useHistory, useLocation } from 'react-router-dom';
+
 import logo from '../../../assets/img/pilgrimsLogo.png';
-import routes from '../../../routes';
-import styles from './styles';
-import Drawer from '../drawer';
 import mobileWidth from '../../../constants/mobileWidth';
+import routes from '../../../routes';
+import Drawer from '../drawer';
+import styles from './styles';
 
 const NavBar = () => {
   const classes = makeStyles(styles)();

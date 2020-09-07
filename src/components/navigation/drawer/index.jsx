@@ -1,17 +1,19 @@
 import React from 'react';
+
+import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
 import List from '@material-ui/core/List';
-import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import Button from '@material-ui/core/Button';
-import { useHistory, useLocation } from 'react-router-dom';
-import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import { makeStyles } from '@material-ui/core/styles';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import PropTypes from 'prop-types';
+import { useHistory, useLocation } from 'react-router-dom';
+
 import logo from '../../../assets/img/pilgrimsLogo.png';
-import styles from './styles';
 import routes from '../../../routes';
+import styles from './styles';
 
 const DrawerComponent = ({ mobileOpen, toggleDrawer }) => {
   const classes = makeStyles(styles)();

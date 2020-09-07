@@ -1,18 +1,20 @@
 import React from 'react';
+
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Link, useHistory } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
-import agmAgenda from '../../../assets/pdf/agmAgenda21-09-2019.pdf';
-import trusteesAgenda from '../../../assets/pdf/trusteesAgenda21-09-2019.pdf';
-import membershipForm from '../../../assets/pdf/membershipForm.pdf';
-import standingOrderFormSingle from '../../../assets/pdf/standingOrderFormSingle.pdf';
-import styles from './styles';
-import standingOrderFormDouble from '../../../assets/pdf/standingOrderFormDouble.pdf';
+
 import kscbcLogo from '../../../assets/img/kscbcLogo.png';
-import oksLogo from '../../../assets/img/oksLogo.jfif';
 import kscLogo from '../../../assets/img/kscLogo.jfif';
+import oksLogo from '../../../assets/img/oksLogo.jfif';
+import agmAgenda from '../../../assets/pdf/agmAgenda21-09-2019.pdf';
+import membershipForm from '../../../assets/pdf/membershipForm.pdf';
+import standingOrderFormDouble from '../../../assets/pdf/standingOrderFormDouble.pdf';
+import standingOrderFormSingle from '../../../assets/pdf/standingOrderFormSingle.pdf';
+import trusteesAgenda from '../../../assets/pdf/trusteesAgenda21-09-2019.pdf';
+import styles from './styles';
 
 
 const Home = () => {
