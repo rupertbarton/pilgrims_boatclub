@@ -15,4 +15,8 @@ export default (theme) => ({
   logoButton: {
     padding: 0,
   },
+  navigationButton: {
+    justifyContent: 'center',
+    width: 'auto',
+  },
 });

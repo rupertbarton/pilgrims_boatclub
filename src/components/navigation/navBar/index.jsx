@@ -4,6 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import ListItem from '@material-ui/core/ListItem';
 import { useHistory, useLocation } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
@@ -59,17 +60,20 @@ const NavBar = () => {
             >
               <img className={classes.logo} src={logo} alt="Logo" />
             </Button>
+
             {routes.map((route) => (
-              <Button
-                color="inherit"
-                variant={location.pathname === route.path ? 'outlined' : 'text'}
+              <ListItem
+                button
+                selected={location.pathname === route.path}
+                variant="contained"
                 key={route.name}
                 onClick={() => history.push(route.path)}
+                className={classes.navigationButton}
               >
                 {route.name}
-              </Button>
-
+              </ListItem>
             ))}
+
           </Toolbar>
         )}
       </AppBar>
