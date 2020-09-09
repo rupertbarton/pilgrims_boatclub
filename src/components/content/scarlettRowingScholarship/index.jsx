@@ -25,9 +25,9 @@ const Home = () => {
         </Typography>
         <Typography variant="body1">
           Great Britain had last won the men’s Olympic eight in 1912. After
-          previous disappointment at the World Championships in 1999, this crew peaked at exactly the
-          right time. Excellent blade work, total commitment and above all self-belief brought this
-          historic victory.
+          previous disappointment at the World Championships in 1999, this crew peaked at exactly
+          the right time. Excellent blade work, total commitment and above all self-belief brought
+          this historic victory.
         </Typography>
         <Typography variant="body1">
           The Pilgrims mark this 20 year anniversary by offering the
