@@ -38,7 +38,7 @@ const Home = () => {
 
       <div>
         <Typography variant="h4">Announcements</Typography>
-        <Typography variant="body1">The next Canterbury Pilgrims BC AGM will be held on Saturday 21st September, 2019 16:00:</Typography>
+        <Typography variant="body1">The next Canterbury Pilgrims BC AGM will be held on Saturday 19th September, 2020 16:00:</Typography>
         <Typography variant="body1">Please find the below links in regards to the agenda:</Typography>
         <Typography variant="body1">
           <a href={trusteesAgenda} rel="noopener noreferrer" target="_blank">Trustee Agenda</a>
@@ -81,6 +81,26 @@ const Home = () => {
       </div>
 
       <Divider />
+
+      <div>
+        <Typography variant="h4">Membership</Typography>
+
+        <Typography variant="body1">To become a member:</Typography>
+        <Typography variant="body1">
+          <a href={membershipForm} rel="noopener noreferrer" target="_blank">Membership Form</a>
+          {' '}
+          &amp;
+          {' '}
+          <a href={standingOrderFormSingle} rel="noopener noreferrer" target="_blank">Standing Order Form (continual)</a>
+          {' '}
+          /
+          {' '}
+          <a href={standingOrderFormDouble} rel="noopener noreferrer" target="_blank">Standing Order Form (specified length)</a>
+        </Typography>
+      </div>
+
+      <Divider />
+
       <div className={classes.centerText}>
         <Typography variant="h5">To Donate to Canterbury Pilgrims Boat Club:</Typography>
         <Button variant="contained" color="primary" href="https://cafdonate.cafonline.org/9193">Donate</Button>

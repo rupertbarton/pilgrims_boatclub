@@ -3,6 +3,7 @@ import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 
 import Home from './components/content/home';
+import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
 
 export default [
   {
@@ -46,6 +47,12 @@ export default [
     path: '/agm-and-trustee-meetings',
     icon: <HomeIcon />,
     component: <div>HiAGM & Trustee !!!!!</div>,
+  },
+  {
+    name: 'Scarlett Rowing Scholarship',
+    path: '/scarlett-rowing-scholarship',
+    icon: <HomeIcon />,
+    component: <ScarlettRowingScholarship />,
   },
   {
     name: 'Club Page',
