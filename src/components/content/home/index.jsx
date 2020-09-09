@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Link, useHistory } from 'react-router-dom';
 
+import henley1991 from '../../../assets/img/henley1991.JPG';
 import kscbcLogo from '../../../assets/img/kscbcLogo.png';
 import kscLogo from '../../../assets/img/kscLogo.jfif';
 import oksLogo from '../../../assets/img/oksLogo.jfif';
@@ -23,6 +24,18 @@ const Home = () => {
 
   return (
     <>
+      <div className={classes.mainImageContainer}>
+        <img
+          className={classes.mainImage}
+          src={henley1991}
+          alt="Henley Royal Regatta Final, 1991"
+        />
+        <Typography className={classes.mainText} variant="body2" color="textSecondary">
+          The King&apos;s School Canterbury racing in the final of the Princess Elizabeth Cup at
+          Henlery in 1991. In reaching the final they won against ReadingBluecoat School, Tabor
+          Academy U.S.A, Shrewsbury and Hampton before losing to Eton in the final.
+        </Typography>
+      </div>
       <div>
         <Typography variant="h4">Welcome to Canterbury Pilgrims Boat Club</Typography>
         <Typography variant="body1">Canterbury Pilgrims Boat Club exists to support rowers and rowing, both past and present, at The King&apos;s School Canterbury.</Typography>
@@ -38,7 +51,7 @@ const Home = () => {
 
       <div>
         <Typography variant="h4">Announcements</Typography>
-        <Typography variant="body1">The next Canterbury Pilgrims BC AGM will be held on Saturday 19th September, 2020 16:00:</Typography>
+        <Typography variant="body1">The next Canterbury Pilgrims BC AGM will be held on Saturday 19th September, 2020 16:00.</Typography>
         <Typography variant="body1">Please find the below links in regards to the agenda:</Typography>
         <Typography variant="body1">
           <a href={trusteesAgenda} rel="noopener noreferrer" target="_blank">Trustee Agenda</a>
