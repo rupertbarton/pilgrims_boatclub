@@ -1,13 +1,20 @@
 import React from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
+import fredScarlett from '../../../assets/img/fredScarlett.jpeg';
+import styles from './styles';
 
-const Home = () => (
-  <>
+
+const Home = () => {
+  const classes = makeStyles(styles)();
+
+  return (
     <div>
       <Typography variant="h4">The Scarlett Rowing Scholarship</Typography>
       <Typography variant="body1">
+        <img className={classes.image} src={fredScarlett} alt="Fred Scarlett" />
         It is 20 years since
         {' '}
         <b>Fred Scarlett (LN 1988-1993)</b>
@@ -34,8 +41,7 @@ const Home = () => (
       </Typography>
 
     </div>
-
-  </>
-);
+  );
+};
 
 export default Home;
