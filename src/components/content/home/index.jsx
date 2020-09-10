@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Link, useHistory } from 'react-router-dom';
 
 import henley1991 from '../../../assets/img/henley1991.JPG';
@@ -15,28 +16,34 @@ import membershipForm from '../../../assets/pdf/membershipForm.pdf';
 import standingOrderFormDouble from '../../../assets/pdf/standingOrderFormDouble.pdf';
 import standingOrderFormSingle from '../../../assets/pdf/standingOrderFormSingle.pdf';
 import trusteesAgenda from '../../../assets/pdf/trusteesAgenda21-09-2019.pdf';
+import mobileWidth from '../../../constants/mobileWidth';
 import styles from './styles';
 
 
 const Home = () => {
   const classes = makeStyles(styles)();
   const history = useHistory();
+  const isMobile = useMediaQuery(`(max-width:${mobileWidth}px)`);
+
+  const mainImage = () => (
+    <div className={classes.mainImageContainer}>
+      <img
+        className={classes.mainImage}
+        src={henley1991}
+        alt="Henley Royal Regatta Final, 1991"
+      />
+      <Typography component="span" className={classes.mainText} variant="body2" color="textSecondary">
+        The King&apos;s School Canterbury racing in the final of the Princess Elizabeth Cup at
+        Henlery in 1991. In reaching the final they won against ReadingBluecoat School, Tabor
+        Academy U.S.A, Shrewsbury and Hampton before losing to Eton in the final.
+      </Typography>
+    </div>
+  );
 
   return (
     <>
-      <div className={classes.mainImageContainer}>
-        <img
-          className={classes.mainImage}
-          src={henley1991}
-          alt="Henley Royal Regatta Final, 1991"
-        />
-        <Typography className={classes.mainText} variant="body2" color="textSecondary">
-          The King&apos;s School Canterbury racing in the final of the Princess Elizabeth Cup at
-          Henlery in 1991. In reaching the final they won against ReadingBluecoat School, Tabor
-          Academy U.S.A, Shrewsbury and Hampton before losing to Eton in the final.
-        </Typography>
-      </div>
       <div>
+        {isMobile || mainImage()}
         <Typography variant="h4">Welcome to Canterbury Pilgrims Boat Club</Typography>
         <Typography variant="body1">Canterbury Pilgrims Boat Club exists to support rowers and rowing, both past and present, at The King&apos;s School Canterbury.</Typography>
         <Typography variant="body1">CPBC also encourages its members to row and race, using either their own boats or its club fleet of boats.</Typography>
@@ -46,6 +53,8 @@ const Home = () => {
           <Link to="/contact-us">Contact us here.</Link>
         </Typography>
       </div>
+
+      {isMobile && mainImage()}
 
       <Divider />
 

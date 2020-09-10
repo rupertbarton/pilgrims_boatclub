@@ -1,11 +1,18 @@
+import mobileWidth from '../../../constants/mobileWidth';
 import contentStyles from '../contentStyles';
 
 export default (theme) => ({
   ...contentStyles(theme),
   mainImageContainer: {
-    float: 'right',
-    width: '50%',
-    marginLeft: theme.spacing(2),
+    [theme.breakpoints.up(mobileWidth)]: {
+      float: 'right',
+      width: '50%',
+      marginLeft: theme.spacing(2),
+    },
+    [theme.breakpoints.down(mobileWidth)]: {
+      maxWidth: 500,
+      margin: 'auto',
+    },
   },
   mainImage: {
     width: '100%',
