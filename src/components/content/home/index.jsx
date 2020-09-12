@@ -88,18 +88,6 @@ const Home = () => {
           to ensure rowing remains an important and successful
           part of school life for years to come.
         </Typography>
-        <Typography variant="body1">To become a member:.</Typography>
-        <Typography variant="body1">
-          <a href={membershipForm} rel="noopener noreferrer" target="_blank">Membership Form</a>
-          {' '}
-          &amp;
-          {' '}
-          <a href={standingOrderFormSingle} rel="noopener noreferrer" target="_blank">Standing Order Form (continual)</a>
-          {' '}
-          /
-          {' '}
-          <a href={standingOrderFormDouble} rel="noopener noreferrer" target="_blank">Standing Order Form (specified length)</a>
-        </Typography>
       </div>
 
       <Divider />
