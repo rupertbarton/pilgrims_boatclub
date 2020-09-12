@@ -1,0 +1,21 @@
+{
+    "extends": [
+        "airbnb/base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "rules": {
+        "import/order": [
+            "error",
+            {
+              "groups": ["builtin", "external", "internal"],
+              "newlines-between": "always",
+              "alphabetize": {
+                "order": "asc",
+                "caseInsensitive": true
+              }
+            }
+          ]
+    }
+}

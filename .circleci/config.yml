@@ -4,9 +4,11 @@ workflows:
   build:
     jobs:
       - build_and_test_client
+      - build_and_test_functions
       - deploy:
           requires:
             - build_and_test_client
+            - build_and_test_functions
           filters:
             branches:
               only:
@@ -41,6 +43,29 @@ jobs:
             - client/build
             - .firebaserc
             - firebase.json
+
+  build_and_test_functions:
+    working_directory: ~/pilgrimBC/functions
+    docker:
+      - image: circleci/node:10.15.1
+        environment:
+          TZ: Europe/London
+    steps:
+      - checkout:
+          path: ~/pilgrimBC
+      - run:
+          name: Installations 
+          command: npm ci
+      - run:
+          name: Run Tests
+          command: npm test
+      - run:
+          name: Run Linting
+          command: npm run lint
+      - persist_to_workspace:
+          root: ~/pilgrimBC
+          paths:
+            - functions
 
   deploy:
     working_directory: ~/pilgrimBC
