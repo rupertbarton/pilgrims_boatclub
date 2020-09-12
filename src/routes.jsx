@@ -3,6 +3,7 @@ import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 
 import Home from './components/content/home';
+import News from './components/content/news';
 import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
 
 export default [
@@ -22,7 +23,7 @@ export default [
     name: 'News',
     path: '/news',
     icon: <HomeIcon />,
-    component: <div>HiNews!!!!!</div>,
+    component: <News />,
   },
   {
     name: 'Offcuts',
