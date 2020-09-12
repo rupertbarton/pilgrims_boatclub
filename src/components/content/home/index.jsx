@@ -16,6 +16,9 @@ import membershipForm from '../../../assets/pdf/membershipForm.pdf';
 import standingOrderFormDouble from '../../../assets/pdf/standingOrderFormDouble.pdf';
 import standingOrderFormSingle from '../../../assets/pdf/standingOrderFormSingle.pdf';
 import trusteesAgenda from '../../../assets/pdf/trusteesAgenda21-09-2019.pdf';
+import {
+  kscbcUrl, oksUrl, kscUrl, donationUrl,
+} from '../../../constants/externalUrls';
 import mobileWidth from '../../../constants/mobileWidth';
 import styles from './styles';
 
@@ -45,8 +48,14 @@ const Home = () => {
       <div>
         {isMobile || mainImage()}
         <Typography variant="h4">Welcome to Canterbury Pilgrims Boat Club</Typography>
-        <Typography variant="body1">Canterbury Pilgrims Boat Club exists to support rowers and rowing, both past and present, at The King&apos;s School Canterbury.</Typography>
-        <Typography variant="body1">CPBC also encourages its members to row and race, using either their own boats or its club fleet of boats.</Typography>
+        <Typography variant="body1">
+          Canterbury Pilgrims Boat Club exists to support rowers and
+          rowing, both past and present, at The King&apos;s School Canterbury.
+        </Typography>
+        <Typography variant="body1">
+          CPBC also encourages its members to row and race, using either
+          their own boats or its club fleet of boats.
+        </Typography>
         <Typography variant="body1">
           To find out how you can join, get involved, help &amp; support please:
           {' '}
@@ -113,16 +122,25 @@ const Home = () => {
 
       <div className={classes.centerText}>
         <Typography variant="h5">To Donate to Canterbury Pilgrims Boat Club:</Typography>
-        <Button variant="contained" color="primary" href="https://cafdonate.cafonline.org/9193">Donate</Button>
+        <Button variant="contained" color="primary" href={donationUrl}>Donate</Button>
       </div>
 
       <Divider />
 
       <div>
         <Typography variant="h4">Parents &amp; Supporters</Typography>
-        <Typography variant="body1">King&apos;s School Canterbury Boat Club needs help and support from Parents of active rowing pupils. From helping to run the Pilgrims to simply turning up on the towpath at a Head or Regatta to cheer on the rowers your participation is greatly valued. If you haven&apos;t joined already please do and also consider offering your help to the club.</Typography>
+        <Typography variant="body1">
+          King&apos;s School Canterbury Boat Club needs help and support
+          from Parents of active rowing pupils. From helping to run the Pilgrims to simply turning
+          up on the towpath at a Head or Regatta to cheer on the rowers your participation is
+          greatly valued. If you haven&apos;t joined already please do and also consider offering
+          your help to the club.
+        </Typography>
+
         <div className={classes.centerText}>
-          <Button variant="contained" color="primary" onClick={() => history.push('/contact-us')}>Join up here</Button>
+          <Button variant="contained" color="primary" onClick={() => history.push('/contact-us')}>
+            Join up here
+          </Button>
         </div>
       </div>
 
@@ -130,17 +148,17 @@ const Home = () => {
 
       <div className={classes.externalLinksContainer}>
         <div className={classes.externalLink}>
-          <a href="http://www.kingsrowing.co.uk/" rel="noopener noreferrer" target="_blank">
+          <a href={kscbcUrl} rel="noopener noreferrer" target="_blank">
             <img className={classes.logo} src={kscbcLogo} alt="KSCBC Logo" />
           </a>
         </div>
         <div className={classes.externalLink}>
-          <a href="http://www.oks.org.uk/" rel="noopener noreferrer" target="_blank">
+          <a href={oksUrl} rel="noopener noreferrer" target="_blank">
             <img className={classes.logo} src={oksLogo} alt="OKS Logo" />
           </a>
         </div>
         <div className={classes.externalLink}>
-          <a href="http://www.kingsrowing.co.uk/results.php" rel="noopener noreferrer" target="_blank">
+          <a href={kscUrl} rel="noopener noreferrer" target="_blank">
             <img className={classes.logo} src={kscLogo} alt="KSC Logo" />
           </a>
         </div>

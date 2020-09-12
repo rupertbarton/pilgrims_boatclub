@@ -61,54 +61,61 @@ const News = () => (
 
     <Divider />
 
-    <Typography variant="h4">News from the river</Typography>
-    <Typography variant="body1">
-      <b>Helena Barton (MT 2010-2015)</b>
-      {' '}
-      represented Durham University over the last four years while completing a Masters in
-      International Relations. Most notably, she won the women’s Championship pair at BUCS Regatta
-      in 2018. She trialled for the Great Britain U23 team in 2019 and reached the crew formation
-      stages, she narrowly missed selection after two weeks of seat racing. She be trialling again
-      for Great Britain this year and looks forward to racing with Tideway Scullers School at
-      Henley.
-    </Typography>
-    <Typography variant="body1">
-      <b>Connie Pidoux (MR 1997-2003)</b>
-      {' '}
-      has enjoyed an outstanding career as a coxswain at Thames Rowing Club. She won the Thames
-      Cup at Henley in 2017 and 2018. Her tenacity saw her through to a third Henley final in
-      2019. It was thrilling and closely fought race but this final went to the visiting Dutch
-      crew.
-    </Typography>
-    <Typography variant="body1">
-      <b>Freddie Allinson (SH 2012-2017)</b>
-      {' '}
-      has been a key member of the impressive Newcastle University eight. They reached the
-      semi-finals of the Temple Challenge Cup at Henley in 2019 losing to Northeastern University,
-      U.S.A by 1/3 length. Over the summer he won a Bronze Medal with the Great Britain U23 team
-      at the European Championships in Greece.
-    </Typography>
-    <Typography variant="body1">
-      <b>Galvin Brady (MR 2010-2015)</b>
-      {' '}
-      writes to say he has concluded 4 years racing for Georgia Tech, U.SA. He raced three times
-      at the Head of the Charles and won several medals at the National Championships.
-    </Typography>
+    <div>
+      <Typography variant="h4">News from the river</Typography>
+      <Typography variant="body1">
+        <b>Helena Barton (MT 2010-2015)</b>
+        {' '}
+        represented Durham University over the last four years while completing a Masters in
+        International Relations. Most notably, she won the women’s Championship pair at BUCS Regatta
+        in 2018. She trialled for the Great Britain U23 team in 2019 and reached the crew formation
+        stages, she narrowly missed selection after two weeks of seat racing. She be trialling again
+        for Great Britain this year and looks forward to racing with Tideway Scullers School at
+        Henley.
+      </Typography>
+      <Typography variant="body1">
+        <b>Connie Pidoux (MR 1997-2003)</b>
+        {' '}
+        has enjoyed an outstanding career as a coxswain at Thames Rowing Club. She won the Thames
+        Cup at Henley in 2017 and 2018. Her tenacity saw her through to a third Henley final in
+        2019. It was thrilling and closely fought race but this final went to the visiting Dutch
+        crew.
+      </Typography>
+      <Typography variant="body1">
+        <b>Freddie Allinson (SH 2012-2017)</b>
+        {' '}
+        has been a key member of the impressive Newcastle University eight. They reached the
+        semi-finals of the Temple Challenge Cup at Henley in 2019 losing to Northeastern University,
+        U.S.A by 1/3 length. Over the summer he won a Bronze Medal with the Great Britain U23 team
+        at the European Championships in Greece.
+      </Typography>
+      <Typography variant="body1">
+        <b>Galvin Brady (MR 2010-2015)</b>
+        {' '}
+        writes to say he has concluded 4 years racing for Georgia Tech, U.SA. He raced three times
+        at the Head of the Charles and won several medals at the National Championships.
+      </Typography>
+    </div>
 
     <Divider />
 
-    <Typography variant="h4">Dates for your diary</Typography>
-    <Typography variant="body1">
-      Join us for our annual lunch at Henley on
-      {' '}
-      <b>Wednesday 1st July</b>
-      . There will also be a smaller
-      gathering for lunch on Saturday 4th July. All Pilgrims and OKS are welcome.
-    </Typography>
-    <Typography variant="body1">
-      The Boat Club dinner and row takes place on Saturday 19th September. We aim for two eights
-      this year.
-    </Typography>
+    <div>
+      <Typography variant="h4">Dates for your diary</Typography>
+      <Typography variant="body1">
+        Join us for our annual lunch at Henley on
+        {' '}
+        <b>Wednesday 1st July</b>
+        . There will also be a smaller
+        gathering for lunch on Saturday 4th July. All Pilgrims and OKS are welcome.
+      </Typography>
+      <Typography variant="body1">
+        The Boat Club dinner and row takes place on
+        {' '}
+        <b>Saturday 19th September</b>
+        . We aim for two eights
+        this year.
+      </Typography>
+    </div>
   </>
 );
 

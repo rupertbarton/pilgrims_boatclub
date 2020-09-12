@@ -3,6 +3,7 @@ import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 
 import Home from './components/content/home';
+import KSCBC from './components/content/kscbc';
 import News from './components/content/news';
 import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
 
@@ -15,9 +16,9 @@ export default [
   },
   {
     name: 'KSCBC',
-    path: '/KSCBC',
+    path: '/kscbc',
     icon: <HomeIcon />,
-    component: <div>HiKSCBC!!!!!</div>,
+    component: <KSCBC />,
   },
   {
     name: 'News',
