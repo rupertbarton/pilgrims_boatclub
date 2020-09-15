@@ -2,6 +2,7 @@ import React from 'react';
 
 import HomeIcon from '@material-ui/icons/Home';
 
+import Gallery from './components/content/gallery';
 import Home from './components/content/home';
 import KSCBC from './components/content/kscbc';
 import News from './components/content/news';
@@ -36,7 +37,7 @@ export default [
     name: 'Gallery',
     path: '/gallery',
     icon: <HomeIcon />,
-    component: <div>HiGallery!!!!!</div>,
+    component: <Gallery />,
   },
   {
     name: 'King\'s School and OKS',
