@@ -7,6 +7,7 @@ import Home from './components/content/home';
 import KSCBC from './components/content/kscbc';
 import News from './components/content/news';
 import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
+import StrategicPlan from './components/content/strategicPlan';
 
 export default [
   {
@@ -28,16 +29,16 @@ export default [
     component: <News />,
   },
   {
-    name: 'Offcuts',
-    path: '/offcuts',
-    icon: <HomeIcon />,
-    component: <div>HiOffcuts!!!!!</div>,
-  },
-  {
     name: 'Gallery',
     path: '/gallery',
     icon: <HomeIcon />,
     component: <Gallery />,
+  },
+  {
+    name: 'Strategic Plan',
+    path: '/strategic-plan',
+    icon: <HomeIcon />,
+    component: <StrategicPlan />,
   },
   {
     name: 'King\'s School and OKS',
