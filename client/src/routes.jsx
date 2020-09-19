@@ -10,6 +10,7 @@ import KSCBC from './components/content/kscbc';
 import News from './components/content/news';
 import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
 import StrategicPlan from './components/content/strategicPlan';
+import AgmAndTrustee from './components/content/agmAndTrustee';
 
 export default [
   {
@@ -52,7 +53,7 @@ export default [
     name: 'AGM & Trustee',
     path: '/agm-and-trustee-meetings',
     icon: <HomeIcon />,
-    component: <div>HiAGM & Trustee !!!!!</div>,
+    component: <AgmAndTrustee />,
   },
   {
     name: 'Scarlett Rowing Scholarship',
