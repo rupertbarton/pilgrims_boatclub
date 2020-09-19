@@ -1,8 +1,7 @@
 import React from 'react';
 
-import HomeIcon from '@material-ui/icons/Home';
-
 import AgmAndTrustee from './components/content/agmAndTrustee';
+import ClubPage from './components/content/clubPage';
 import ContactUs from './components/content/contactUs';
 import Gallery from './components/content/gallery';
 import Home from './components/content/home';
@@ -16,61 +15,51 @@ export default [
   {
     name: 'Home',
     path: '/',
-    icon: <HomeIcon />,
     component: <Home />,
   },
   {
     name: 'KSCBC',
     path: '/kscbc',
-    icon: <HomeIcon />,
     component: <KSCBC />,
   },
   {
     name: 'News',
     path: '/news',
-    icon: <HomeIcon />,
     component: <News />,
   },
   {
     name: 'Gallery',
     path: '/gallery',
-    icon: <HomeIcon />,
     component: <Gallery />,
   },
   {
     name: 'Strategic Plan',
     path: '/strategic-plan',
-    icon: <HomeIcon />,
     component: <StrategicPlan />,
   },
   {
     name: 'King\'s School and OKS',
     path: '/kings-school-and-oks',
-    icon: <HomeIcon />,
     component: <KingsSchoolAndOks />,
   },
   {
     name: 'AGM & Trustee',
     path: '/agm-and-trustee-meetings',
-    icon: <HomeIcon />,
     component: <AgmAndTrustee />,
   },
   {
     name: 'Scarlett Rowing Scholarship',
     path: '/scarlett-rowing-scholarship',
-    icon: <HomeIcon />,
     component: <ScarlettRowingScholarship />,
   },
-  // {
-  //   name: 'Club Page',
-  //   path: '/club',
-  //   icon: <HomeIcon />,
-  //   component: <div>HiClub !!!!!</div>,
-  // },
+  {
+    name: 'Club Page',
+    path: '/club',
+    component: <ClubPage />,
+  },
   {
     name: 'Contact Us',
     path: '/contact-us',
-    icon: <HomeIcon />,
     component: <ContactUs />,
   },
 ];

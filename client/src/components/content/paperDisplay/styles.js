@@ -13,7 +13,7 @@ export default (theme) => ({
     marginRight: 'auto',
     marginLeft: 'auto',
     marginBottom: `${theme.spacing(5)}px`,
-    '& p, & hr, & h4, & li, & table, & h3': {
+    '& p, & hr,  & li, & table, & h6, & h5, & h4, & h3': {
       margin: `${theme.spacing(2)}px 0px`,
     },
     [theme.breakpoints.up(mobileWidth)]: {
