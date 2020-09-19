@@ -5,6 +5,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import ContactUs from './components/content/contactUs';
 import Gallery from './components/content/gallery';
 import Home from './components/content/home';
+import KingsSchoolAndOks from './components/content/kingsSchoolAndOks';
 import KSCBC from './components/content/kscbc';
 import News from './components/content/news';
 import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
@@ -45,7 +46,7 @@ export default [
     name: 'King\'s School and OKS',
     path: '/kings-school-and-oks',
     icon: <HomeIcon />,
-    component: <div>HiKing!!!!!</div>,
+    component: <KingsSchoolAndOks />,
   },
   {
     name: 'AGM & Trustee',
