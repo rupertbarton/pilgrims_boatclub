@@ -10,8 +10,10 @@ export default (theme) => ({
     },
   },
   paperBody: {
-    margin: 'auto',
-    '& *': {
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    marginBottom: `${theme.spacing(5)}px`,
+    '& p, & hr, & h4, & li, & table, & h3': {
       margin: `${theme.spacing(2)}px 0px`,
     },
     [theme.breakpoints.up(mobileWidth)]: {

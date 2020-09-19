@@ -2,6 +2,7 @@ import React from 'react';
 
 import HomeIcon from '@material-ui/icons/Home';
 
+import ContactUs from './components/content/contactUs';
 import Gallery from './components/content/gallery';
 import Home from './components/content/home';
 import KSCBC from './components/content/kscbc';
@@ -68,6 +69,6 @@ export default [
     name: 'Contact Us',
     path: '/contact-us',
     icon: <HomeIcon />,
-    component: <div>Contact US</div>,
+    component: <ContactUs />,
   },
 ];
