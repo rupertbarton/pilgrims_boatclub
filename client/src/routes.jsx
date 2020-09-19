@@ -2,6 +2,7 @@ import React from 'react';
 
 import HomeIcon from '@material-ui/icons/Home';
 
+import AgmAndTrustee from './components/content/agmAndTrustee';
 import ContactUs from './components/content/contactUs';
 import Gallery from './components/content/gallery';
 import Home from './components/content/home';
@@ -10,7 +11,6 @@ import KSCBC from './components/content/kscbc';
 import News from './components/content/news';
 import ScarlettRowingScholarship from './components/content/scarlettRowingScholarship';
 import StrategicPlan from './components/content/strategicPlan';
-import AgmAndTrustee from './components/content/agmAndTrustee';
 
 export default [
   {
@@ -61,12 +61,12 @@ export default [
     icon: <HomeIcon />,
     component: <ScarlettRowingScholarship />,
   },
-  {
-    name: 'Club Page',
-    path: '/club',
-    icon: <HomeIcon />,
-    component: <div>HiClub !!!!!</div>,
-  },
+  // {
+  //   name: 'Club Page',
+  //   path: '/club',
+  //   icon: <HomeIcon />,
+  //   component: <div>HiClub !!!!!</div>,
+  // },
   {
     name: 'Contact Us',
     path: '/contact-us',
